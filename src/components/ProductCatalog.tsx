@@ -453,7 +453,7 @@ export default function ProductCatalog({
           <span className="text-[10px] font-bold uppercase tracking-widest text-[#C29F38]">Sesión de Videos</span>
           <h2 className="font-serif text-3xl font-normal text-[#1C1A17] mt-3">Videos del Atelier</h2>
           <p className="mx-auto max-w-2xl text-xs leading-relaxed text-[#625E57] mt-4">
-            Disfruta de una muestra visual de nuestras piezas en movimiento. Los videos se cargan desde la carpeta local de assets/videos.
+            Disfruta de una muestra visual de nuestras piezas en movimiento.
           </p>
         </div>
 

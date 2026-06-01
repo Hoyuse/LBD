@@ -32,15 +32,14 @@ export default function Navigation({
         {/* Brand Logo - LBD */}
         <div 
           onClick={() => setActiveTab("lookbook")} 
-          className="flex cursor-pointer items-center space-x-2 transition-opacity hover:opacity-90"
+          className="flex cursor-pointer items-center transition-opacity hover:opacity-90"
           id="lbd-logo-container"
+          role="button"
+          aria-label="LBD"
         >
-          <div className="flex items-center justify-center font-sans font-black text-xl tracking-wider text-white" id="logo-badge">
+          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 font-sans font-black text-xl tracking-[0.3em] text-white" id="logo-badge">
             LBD
           </div>
-          <span className="font-serif text-sm font-semibold tracking-widest text-white sm:inline uppercase">
-            LOCKS BY DANNA
-          </span>
         </div>
 
         {/* Navigation Menu matched with the screenshot */}
