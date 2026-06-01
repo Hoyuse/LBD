@@ -1,0 +1,6 @@
+{
+  "name": "Locks by Danna",
+  "description": "Luxury Hair Accessories - Accesorios de pelo de lujo para la mujer moderna y sofisticada con probador virtual y estilista de IA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

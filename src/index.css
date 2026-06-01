@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-luxury-gold: #D4AF37;
+  --color-gold-dark: #8F7225;
+  --color-gold-light: #FCE6E9;
+  --color-brand-pink: #EC1B96;
+  --color-brand-pink-dark: #C60D79;
+  --color-atelier-charcoal: #2A1A1D;
+  --color-atelier-cream: #FFF4F5;
+  --color-atelier-sand: #FCEBED;
+}
+
+/* Custom fine line-height scrollbar for editorial feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF4F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #E2DFD9;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C29F38;
+}
+
+/* Base custom styles to reinforce high fashion layout */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-atelier-cream);
+  color: var(--color-atelier-charcoal);
+  overflow-x: hidden;
+}

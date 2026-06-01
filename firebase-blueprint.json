@@ -1,0 +1,42 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile containing hair characteristics and basic information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "The unique identifier of the user (authuid)" },
+        "name": { "type": "string", "description": "Full name of the user" },
+        "email": { "type": "string", "description": "Registered email address" },
+        "hairType": { "type": "string", "description": "Structure of the user's hair (lacio, ondulado, rizado, afro)" },
+        "hairLength": { "type": "string", "description": "Length of the user's hair (corto, medio, largo)" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Timestamp when the profile was generated" }
+      },
+      "required": ["uid", "name", "email", "hairType", "hairLength", "createdAt"]
+    },
+    "Appointment": {
+      "title": "Appointment",
+      "description": "Booking request for physical showroom visits in Cartagena",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier of the appointment document" },
+        "userId": { "type": "string", "description": "Identifier of the requesting user" },
+        "userName": { "type": "string", "description": "Name of the requesting user" },
+        "userEmail": { "type": "string", "description": "Email address of the requesting user" },
+        "status": { "type": "string", "enum": ["pending", "approved", "visited"], "description": "State of the invitation" },
+        "requestedAt": { "type": "string", "format": "date-time", "description": "Server handoff date" }
+      },
+      "required": ["id", "userId", "userName", "userEmail", "status", "requestedAt"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "User",
+      "description": "Collection of user details locked by user ID"
+    },
+    "appointments/{appointmentId}": {
+      "schema": "Appointment",
+      "description": "Showroom invitations requests"
+    }
+  }
+}
