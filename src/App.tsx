@@ -9,6 +9,27 @@ import { MapPin, Calendar, Compass, ShieldCheck, HelpCircle, Hammer, Sparkles, S
 import { motion, AnimatePresence } from "motion/react";
 import { useFirebase } from "./context/FirebaseContext";
 
+const VIDEO_GALLERY = [
+  {
+    id: "video-atelier",
+    title: "Atelier en Movimiento",
+    description: "Un vistazo al proceso creativo detrás de una tiara Locks by Danna.",
+    src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+  },
+  {
+    id: "video-presentacion",
+    title: "Presentación de Colección",
+    description: "Muestra de la nueva selección de joyas capilares y estilismos exclusivos.",
+    src: "https://www.w3schools.com/html/mov_bbb.mp4"
+  },
+  {
+    id: "video-detalle",
+    title: "Detalle de Texturas",
+    description: "Captura los acabados y el brillo de cada pieza con movimiento y luz.",
+    src: "https://media.w3.org/2010/05/sintel/trailer.mp4"
+  }
+];
+
 export default function App() {
   const { user, fbUser, loading, appointments, logout, bookAppointment } = useFirebase();
 
@@ -258,6 +279,36 @@ export default function App() {
                     )}
                   </div>
                 </div>
+
+                <section className="mt-20 rounded-3xl border border-[#E2DFD9] bg-[#FFFDF9] p-8 shadow-sm" id="video-session">
+                  <div className="text-center mb-10">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#C29F38]">Sesión de Videos</span>
+                    <h2 className="font-serif text-3xl font-normal text-[#1C1A17] mt-3">Videos Del Atelier</h2>
+                    <p className="mx-auto max-w-2xl text-xs leading-relaxed text-[#625E57] mt-4">
+                      Mira cómo cobran vida nuestras piezas en movimiento. Puedes reemplazar estos ejemplos por tus propios videos MP4 de hasta 4MB cada uno en el futuro.
+                    </p>
+                  </div>
+
+                  <div className="grid gap-6 md:grid-cols-3">
+                    {VIDEO_GALLERY.map((video) => (
+                      <div key={video.id} className="rounded-2xl overflow-hidden border border-[#E2DFD9] bg-white shadow-sm">
+                        <video
+                          controls
+                          playsInline
+                          className="h-44 w-full bg-[#000] object-cover"
+                          poster=""
+                        >
+                          <source src={video.src} type="video/mp4" />
+                          Tu navegador no soporta este formato de video.
+                        </video>
+                        <div className="p-4">
+                          <h3 className="font-serif text-base font-semibold text-[#1C1A17]">{video.title}</h3>
+                          <p className="mt-2 text-[11px] leading-relaxed text-[#625E57]">{video.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
 
               </div>
             )}

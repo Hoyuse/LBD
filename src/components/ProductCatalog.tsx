@@ -25,6 +25,21 @@ export default function ProductCatalog({
   const [vipEmail, setVipEmail] = useState("");
   const [vipSubscribed, setVipSubscribed] = useState(false);
 
+  const VIDEO_GALLERY = [
+    {
+      id: "video-1",
+      title: "Atelier en Movimiento",
+      description: "Descubre el proceso creativo detrás de nuestras piezas premium.",
+      src: new URL("../assets/videos/video1.mp4", import.meta.url).href
+    },
+    {
+      id: "video-2",
+      title: "Textura y Brillo",
+      description: "Observa los detalles de cada joya capilar en acción.",
+      src: new URL("../assets/videos/video2.mp4", import.meta.url).href
+    }
+  ];
+
   // Filter products by collection, category, and search keyword
   const filteredProducts = PRODUCTS.filter(p => {
     // Search keyword filters
@@ -432,6 +447,31 @@ export default function ProductCatalog({
           </div>
         </div>
       </div>
+
+      <section className="mt-28 rounded-3xl border border-[#E2DFD9] bg-[#FFFDF9] p-8 shadow-sm" id="video-gallery-section">
+        <div className="text-center mb-10">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-[#C29F38]">Sesión de Videos</span>
+          <h2 className="font-serif text-3xl font-normal text-[#1C1A17] mt-3">Videos del Atelier</h2>
+          <p className="mx-auto max-w-2xl text-xs leading-relaxed text-[#625E57] mt-4">
+            Disfruta de una muestra visual de nuestras piezas en movimiento. Los videos se cargan desde la carpeta local de assets/videos.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {VIDEO_GALLERY.map((video) => (
+            <div key={video.id} className="rounded-2xl overflow-hidden border border-[#E2DFD9] bg-white shadow-sm">
+              <video controls playsInline className="h-52 w-full bg-[#000] object-cover">
+                <source src={video.src} type="video/mp4" />
+                Tu navegador no soporta este formato de video.
+              </video>
+              <div className="p-4">
+                <h3 className="font-serif text-base font-semibold text-[#1C1A17]">{video.title}</h3>
+                <p className="mt-2 text-[11px] leading-relaxed text-[#625E57]">{video.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* 5. VIP LIST SIGNUP WITH INTERACTIVE DISCOUNT GENERATOR */}
       <div className="mt-28 rounded-2xl border border-[#E2DFD9] bg-gradient-to-br from-[#FBFFFC] to-[#F2EFE9]/40 p-8 md:p-14 relative overflow-hidden" id="vip-signup-box">
