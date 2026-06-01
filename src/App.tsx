@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import Navigation from "./components/Navigation";
 import ProductCatalog from "./components/ProductCatalog";
 import CartDrawer from "./components/CartDrawer";
@@ -43,7 +43,7 @@ export default function App() {
 
   const handleBookShowroom = async () => {
     if (!fbUser) {
-      setBookingError("Por favor, inicia sesión o regístrate para solicitar tu cita.");
+      setBookingError("Por favor, inicia sesiÃ³n o regÃ­strate para solicitar tu cita.");
       setIsRegisterOpen(true);
       return;
     }
@@ -52,7 +52,7 @@ export default function App() {
     try {
       await bookAppointment();
     } catch (err: any) {
-      setBookingError(err?.message || "No se pudo agendar la cita. Inténtalo de nuevo.");
+      setBookingError(err?.message || "No se pudo agendar la cita. IntÃ©ntalo de nuevo.");
     } finally {
       setIsBookingLoading(false);
     }
@@ -134,20 +134,20 @@ export default function App() {
                 <div className="grid gap-12 lg:grid-cols-12 items-center">
                   <div className="lg:col-span-5 space-y-6">
                     <span className="text-xs font-bold uppercase tracking-widest text-[#C29F38]">
-                      EL ARTE DETRÁS DE LBD
+                      EL ARTE DETRÃS DE LBD
                     </span>
                     <h1 className="font-serif text-4xl font-normal text-[#1C1A17] sm:text-5xl lg:text-5xl leading-tight">
                       Nuestra Historia & Compromiso
                     </h1>
                     <div className="h-0.5 w-16 bg-[#C29F38]"></div>
                     <p className="text-xs leading-relaxed text-[#625E57]">
-                      Fundada por Danna, la marca <strong>Locks by Danna (LBD)</strong> nació de un profundo deseo de redefinir cómo las mujeres coronan su cabello en sus ocasiones más significativas. Creemos firmemente que una joya capilar no es simplemente un accesorio decorativo, sino un reflejo sagrado de tu luz personal, estilo único y sofisticación intrínseca.
+                      Fundada por Danna, la marca <strong>Locks by Danna (LBD)</strong> naciÃ³ de un profundo deseo de redefinir cÃ³mo las mujeres coronan su cabello en sus ocasiones mÃ¡s significativas. Creemos firmemente que una joya capilar no es simplemente un accesorio decorativo, sino un reflejo sagrado de tu luz personal, estilo Ãºnico y sofisticaciÃ³n intrÃ­nseca.
                     </p>
                     <p className="text-xs leading-relaxed text-[#625E57]">
-                      Cada tiara, pasador y diadema es concebido meticulosamente uniendo las técnicas más rigurosas de la alta orfebrería con materiales nobles seleccionados con dedicación absoluta: perlas silvestres cultivadas individualmente, sedas satinadas de tejedurías italianas de primer nivel y estructuras flexibles bañadas en oro de 18k pensadas para no maltratar ninguna fibra capilar.
+                      Cada tiara, pasador y diadema es concebido meticulosamente uniendo las tÃ©cnicas mÃ¡s rigurosas de la alta orfebrerÃ­a con materiales nobles seleccionados con dedicaciÃ³n absoluta: perlas silvestres cultivadas individualmente, sedas satinadas de tejedurÃ­as italianas de primer nivel y estructuras flexibles baÃ±adas en oro de 18k pensadas para no maltratar ninguna fibra capilar.
                     </p>
                     <p className="text-xs italic text-[#8F7225]">
-                      “¡Tu corona te espera, bestie! Brilla con total seguridad sabiendo que cada pieza del Atelier fue creada pensando exclusivamente en destacar lo mejor de ti.” — Danna.
+                      â€œÂ¡Tu corona te espera, bestie! Brilla con total seguridad sabiendo que cada pieza del Atelier fue creada pensando exclusivamente en destacar lo mejor de ti.â€ â€” Danna.
                     </p>
                   </div>
 
@@ -155,7 +155,7 @@ export default function App() {
                   <div className="lg:col-span-7 relative flex justify-center">
                     <div className="relative aspect-[3/2] w-full max-w-[580px] bg-[#F2EFE9] border border-[#E2DFD9] rounded-sm overflow-hidden shadow-xl">
                       <img
-                        src="/src/assets/images/lbd_about_afro_portrait_1780281476887.png"
+                        src={new URL("./assets/images/lbd_about_afro_portrait_1780281476887.png", import.meta.url).href}
                         alt="Locks by Danna Atelier"
                         referrerPolicy="no-referrer"
                         className="h-full w-full object-cover brightness-[0.98]"
@@ -164,7 +164,7 @@ export default function App() {
                       {/* floating mark badge */}
                       <div className="absolute top-6 left-6 bg-[#1C1A17]/90 backdrop-blur-md px-5 py-3 text-[#FBFFFC] border border-[#E2DFD9]/20 rounded-xs">
                         <span className="font-mono text-[9px] uppercase tracking-widest text-[#C29F38] block font-bold">Maison Certificada</span>
-                        <span className="font-serif text-sm italic font-normal">Locks by Danna — Cartagena</span>
+                        <span className="font-serif text-sm italic font-normal">Locks by Danna â€” Cartagena</span>
                       </div>
                     </div>
                   </div>
@@ -178,7 +178,7 @@ export default function App() {
                     </div>
                     <h3 className="font-serif text-lg font-medium text-[#1C1A17]">1. Calidad Sostenible</h3>
                     <p className="text-xs leading-relaxed text-[#625E57]">
-                      Metales nobles de bajo impacto, libres de níquel y plomo. Baños de oro pulidos individualmente para asegurar un brillo inmarcesible que no altera la salud capilar.
+                      Metales nobles de bajo impacto, libres de nÃ­quel y plomo. BaÃ±os de oro pulidos individualmente para asegurar un brillo inmarcesible que no altera la salud capilar.
                     </p>
                   </div>
 
@@ -188,7 +188,7 @@ export default function App() {
                     </div>
                     <h3 className="font-serif text-lg font-medium text-[#1C1A17]">2. Perlas Seleccionadas</h3>
                     <p className="text-xs leading-relaxed text-[#625E57]">
-                      Trabajamos perlas barrocas y de agua dulce procedentes de cultivos éticos certificados. Cada perla se comprueba bajo lupa de joyería para corroborar su lustre de seda.
+                      Trabajamos perlas barrocas y de agua dulce procedentes de cultivos Ã©ticos certificados. Cada perla se comprueba bajo lupa de joyerÃ­a para corroborar su lustre de seda.
                     </p>
                   </div>
 
@@ -196,9 +196,9 @@ export default function App() {
                     <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-[#F2EFE9] text-[#C29F38]">
                       <ShieldCheck className="h-5 w-5" />
                     </div>
-                    <h3 className="font-serif text-lg font-medium text-[#1C1A17]">3. Atención Personalizada</h3>
+                    <h3 className="font-serif text-lg font-medium text-[#1C1A17]">3. AtenciÃ³n Personalizada</h3>
                     <p className="text-xs leading-relaxed text-[#625E57]">
-                      Le brindamos un trato exclusivo y personalizado para coordinar la pieza óptima de acuerdo a sus necesidades y fisionomía capilar, asegurando una experiencia perfecta.
+                      Le brindamos un trato exclusivo y personalizado para coordinar la pieza Ã³ptima de acuerdo a sus necesidades y fisionomÃ­a capilar, asegurando una experiencia perfecta.
                     </p>
                   </div>
                 </div>
@@ -207,23 +207,23 @@ export default function App() {
                 <div className="mt-20 rounded-sm border border-[#E2DFD9] bg-[#F2EFE9]/40 p-8 md:p-12" id="about-showroom">
                   <div className="max-w-2xl space-y-5">
                     <span className="text-[10px] font-bold uppercase tracking-widest text-[#8F7225]">
-                      Maison Privée Appointments
+                      Maison PrivÃ©e Appointments
                     </span>
                     <h2 className="font-serif text-2xl font-normal text-[#1C1A17] sm:text-3xl">
                       Ven a Vivir Nuestro Atelier en Persona
                     </h2>
                     <p className="text-xs leading-relaxed text-[#625E57]">
-                      Si eres novia, madrina, o estás preparando un estilismo especial de gala y deseas una sesión física privada de ajuste y selección, te abrimos las puertas de nuestro espacio taller exclusivo en Cartagena. Recibe asesoramiento directo de Danna, calibra la ergonomía de la tiara de tus sueños y peina tu silueta con total holgura.
+                      Si eres novia, madrina, o estÃ¡s preparando un estilismo especial de gala y deseas una sesiÃ³n fÃ­sica privada de ajuste y selecciÃ³n, te abrimos las puertas de nuestro espacio taller exclusivo en Cartagena. Recibe asesoramiento directo de Danna, calibra la ergonomÃ­a de la tiara de tus sueÃ±os y peina tu silueta con total holgura.
                     </p>
                     
                     <div className="pt-4 flex flex-col sm:flex-row gap-4 text-xs font-mono text-[#1C1A17]">
                       <span className="flex items-center space-x-2">
                         <MapPin className="h-4 w-4 text-[#C29F38]" />
-                        <span>Centro Histórico, Cartagena, Colombia</span>
+                        <span>Centro HistÃ³rico, Cartagena, Colombia</span>
                       </span>
                       <span className="flex items-center space-x-2">
                         <Calendar className="h-4 w-4 text-[#C29F38]" />
-                        <span>Lunes a Sábado mediante invitación</span>
+                        <span>Lunes a SÃ¡bado mediante invitaciÃ³n</span>
                       </span>
                     </div>
 
@@ -234,7 +234,7 @@ export default function App() {
                           disabled={isBookingLoading}
                           className="mt-6 flex items-center space-x-2 rounded-sm bg-[#1C1A17] hover:bg-[#EC1B96] px-6 py-3 text-xs font-bold uppercase tracking-wider text-[#FBFFFC] transition-colors cursor-pointer disabled:opacity-65"
                         >
-                          <span>{isBookingLoading ? "Sujetando cita..." : "Solicitar Invitación de Showroom"}</span>
+                          <span>{isBookingLoading ? "Sujetando cita..." : "Solicitar InvitaciÃ³n de Showroom"}</span>
                           <ArrowRight className="h-4 w-4 text-[#C29F38]" />
                         </button>
                         {bookingError && (
@@ -250,9 +250,9 @@ export default function App() {
                         animate={{ opacity: 1, y: 0 }}
                         className="p-5 bg-[#FBFFFC] border border-[#C29F38] text-xs space-y-2 text-[#1C1A17]"
                       >
-                        <h4 className="font-serif text-sm font-bold text-[#8F7225]">¡Solicitud Registrada en Firestore, Bestie!</h4>
+                        <h4 className="font-serif text-sm font-bold text-[#8F7225]">Â¡Solicitud Registrada en Firestore, Bestie!</h4>
                         <p className="text-[#625E57] leading-relaxed">
-                          Danna o uno de nuestros estilistas especializados se contactará a tu correo ({currentUser?.email}) para agendar tu cita oficial y enviarte las coordenadas del showroom privado en Cartagena. ¡Te esperamos!
+                          Danna o uno de nuestros estilistas especializados se contactarÃ¡ a tu correo ({currentUser?.email}) para agendar tu cita oficial y enviarte las coordenadas del showroom privado en Cartagena. Â¡Te esperamos!
                         </p>
                       </motion.div>
                     )}
@@ -297,7 +297,7 @@ export default function App() {
                 </span>
               </div>
               <p className="text-xs leading-relaxed text-[#625E57] max-w-sm">
-                Elegancia en cada detalle. Accesorios de pelo de lujo pensados para la mujer moderna, empoderada y sofisticada. Colecciones artesanales de tiaras, diademas y pasadores pulidos a mano. ¡Tu corona te espera, bestie!
+                Elegancia en cada detalle. Accesorios de pelo de lujo pensados para la mujer moderna, empoderada y sofisticada. Colecciones artesanales de tiaras, diademas y pasadores pulidos a mano. Â¡Tu corona te espera, bestie!
               </p>
             </div>
 
@@ -305,7 +305,7 @@ export default function App() {
             <div>
               <h4 className="font-serif text-xs font-bold uppercase tracking-wider text-[#1C1A17] mb-3">Colecciones</h4>
               <ul className="space-y-2 text-xs text-[#625E57]">
-                <li><button onClick={() => { setActiveTab("lookbook"); }} className="hover:text-[#C29F38] transition-colors text-left">Colección Principal</button></li>
+                <li><button onClick={() => { setActiveTab("lookbook"); }} className="hover:text-[#C29F38] transition-colors text-left">ColecciÃ³n Principal</button></li>
                 <li><button onClick={() => { setActiveTab("lookbook"); }} className="hover:text-[#C29F38] transition-colors text-left">Favoritos de Danna</button></li>
                 <li><button onClick={() => { setActiveTab("lookbook"); }} className="hover:text-[#C29F38] transition-colors text-left">Sets Especiales & Ahorro</button></li>
                 <li><button onClick={() => { setActiveTab("about"); }} className="hover:text-[#C29F38] transition-colors text-left">Nosotros LBD</button></li>
@@ -325,13 +325,13 @@ export default function App() {
           </div>
 
           <div className="mt-12 pt-6 border-t border-[#F2EFE9] flex flex-col md:flex-row items-center justify-between text-[11px] text-[#625E57]" id="sub-footer">
-            <p>© 2024 Locks by Danna. Todos los derechos reservados.</p>
+            <p>Â© 2024 Locks by Danna. Todos los derechos reservados.</p>
             <div className="flex space-x-4 mt-4 md:mt-0 font-mono text-[9px]" id="legal-links">
-              <a href="#" className="hover:text-[#C29F38]">Términos de Servicio</a>
-              <span>•</span>
+              <a href="#" className="hover:text-[#C29F38]">TÃ©rminos de Servicio</a>
+              <span>â€¢</span>
               <a href="#" className="hover:text-[#C29F38]">Privacidad</a>
-              <span>•</span>
-              <a href="#" className="hover:text-[#C29F38]">Envíos & Devoluciones</a>
+              <span>â€¢</span>
+              <a href="#" className="hover:text-[#C29F38]">EnvÃ­os & Devoluciones</a>
             </div>
           </div>
         </div>
