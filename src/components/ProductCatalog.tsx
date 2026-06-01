@@ -109,7 +109,7 @@ export default function ProductCatalog({
         {/* Centered Slogan and brand name matching the screenshot exactly */}
         <div className="z-10 text-center max-w-3xl mx-auto px-4 flex flex-col items-center justify-center space-y-4">
           <span className="bg-[#EC1B96]/95 backdrop-blur-md text-[#FBFFFC] px-3.5 py-1 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest rounded-full border border-white/20 animate-pulse shadow-sm">
-            �S� Nueva Línea Exclusiva
+            ¡Nueva Línea Exclusiva
           </span>
           <h1 className="font-serif text-[#FBFFFC] text-4.5xl sm:text-6xl md:text-7xl font-light tracking-widest drop-shadow-lg leading-none">
             LOCKS BY DANNA
@@ -167,7 +167,7 @@ export default function ProductCatalog({
           <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#FFF4F5] text-[#EC1B96]">
             <Sparkle className="h-3.5 w-3.5 fill-[#EC1B96]" />
           </span>
-          <span>DISE�OS EXCLUSIVOS</span>
+          <span>DISEÑOS EXCLUSIVOS</span>
         </div>
       </div>
 
@@ -402,7 +402,7 @@ export default function ProductCatalog({
           {/* Card 3: Flores silvestres */}
           <div className="group bg-[#FBFFFC] border border-[#E2DFD9] rounded-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md">
             <div className="relative aspect-[3/4] bg-[#F2EFE9] overflow-hidden">
-              <img src={new URL("../assets/images/lbd_product_blossom_knot_1780280846869.png", import.meta.url).href} alt="N�ud Fleuri" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <img src={new URL("../assets/images/lbd_product_blossom_knot_1780280846869.png", import.meta.url).href} alt="Nœud Fleuri" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute top-3 left-3">
                 <span className="rounded-sm bg-[#1C1A17] text-[#FBFFFC] text-[8px] font-extrabold uppercase px-1.5 py-0.5">Bucólico</span>
               </div>
@@ -447,7 +447,7 @@ export default function ProductCatalog({
             <Sparkle className="h-5 w-5 fill-[#C29F38]" />
           </div>
           
-          <h2 className="font-serif text-3xl md:text-4xl font-normal text-[#1C1A17]">�anete a nuestra VIP List</h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-normal text-[#1C1A17]">Únete a nuestra VIP List</h2>
           
           <p className="font-sans text-xs sm:text-sm leading-relaxed text-[#625E57]">
             Recibe un <strong className="text-[#C29F38]">10% de descuento inmediato</strong> en tu primera compra del Atelier y sé la primera en enterarte de nuevos drops exclusivos. Elegancia en cada detalle. Accesorios de lujo pensados para la mujer moderna, audaz y sofisticada.

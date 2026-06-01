@@ -147,7 +147,7 @@ export default function App() {
                       Cada tiara, pasador y diadema es concebido meticulosamente uniendo las técnicas más rigurosas de la alta orfebrería con materiales nobles seleccionados con dedicación absoluta: perlas silvestres cultivadas individualmente, sedas satinadas de tejedurías italianas de primer nivel y estructuras flexibles bañadas en oro de 18k pensadas para no maltratar ninguna fibra capilar.
                     </p>
                     <p className="text-xs italic text-[#8F7225]">
-                      �S¡Tu corona te espera, bestie! Brilla con total seguridad sabiendo que cada pieza del Atelier fue creada pensando exclusivamente en destacar lo mejor de ti.⬝ � Danna.
+                      “¡Tu corona te espera, bestie! Brilla con total seguridad sabiendo que cada pieza del Atelier fue creada pensando exclusivamente en destacar lo mejor de ti.” — Danna.
                     </p>
                   </div>
 
@@ -164,7 +164,7 @@ export default function App() {
                       {/* floating mark badge */}
                       <div className="absolute top-6 left-6 bg-[#1C1A17]/90 backdrop-blur-md px-5 py-3 text-[#FBFFFC] border border-[#E2DFD9]/20 rounded-xs">
                         <span className="font-mono text-[9px] uppercase tracking-widest text-[#C29F38] block font-bold">Maison Certificada</span>
-                        <span className="font-serif text-sm italic font-normal">Locks by Danna � Cartagena</span>
+                        <span className="font-serif text-sm italic font-normal">Locks by Danna — Cartagena</span>
                       </div>
                     </div>
                   </div>

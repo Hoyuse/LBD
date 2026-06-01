@@ -8,8 +8,6 @@ export const formatCOP = (value: number) => {
   return `$${formatted} COP`;
 };
 
-export const assetUrl = (relativePath: string) => new URL(relativePath, import.meta.url).href;
-
 export const PRODUCTS: Product[] = [
   {
     id: "lbd-tiara",
@@ -17,7 +15,7 @@ export const PRODUCTS: Product[] = [
     frenchName: "Duo de Perles",
     description: "Nuestra creación estelar hecha de una diadema minimalista de doble arco de oro pulido de alta gama, salpicada con delicadas perlas de agua dulce cultivadas a mano. Una pieza celestial que se funde suavemente con el cabello.",
     price: 740000,
-    image: assetUrl("./assets/images/lbd_product_pearl_tiara_1780280813932.png"), // Stand-alone Pearl Tiara
+    image: new URL("./assets/images/lbd_product_pearl_tiara_1780280813932.png", import.meta.url).href, // Stand-alone Pearl Tiara
     category: "diadema",
     isFavorito: true,
     materials: "Oro de 18 quilates, perlas cultivadas seleccionadas, estructura flexible ultra-ligera.",
@@ -42,7 +40,7 @@ export const PRODUCTS: Product[] = [
     frenchName: "Amas de Perles",
     description: "Un sofisticado e intrincado ramillete de perlas de diversos diámetros, engarzadas a mano con hilo de plata fina sobre un pasador plateado de alta retención. Ofrece un brillo orgánico y volumétrico que aporta frescura y clasicismo.",
     price: 380000,
-    image: assetUrl("./assets/images/lbd_product_pearl_slide_1780280828278.png"), // Stand-alone Pearl Slide
+    image: new URL("./assets/images/lbd_product_pearl_slide_1780280828278.png", import.meta.url).href, // Stand-alone Pearl Slide
     category: "pasador",
     isFavorito: true,
     materials: "Biga metálica de rodio brillante, perlas de agua dulce de tamaños mixtos (2mm a 8mm), engaste con hilos de plata esterlina.",
@@ -64,10 +62,10 @@ export const PRODUCTS: Product[] = [
   {
     id: "lbd-blossom",
     name: "The Blossom Knot",
-    frenchName: "N�ud Fleuri",
+    frenchName: "Nœud Fleuri",
     description: "Diadema acolchada estructurada por un nudo artesanal, confeccionada con jacquard de seda estampada con motivos capullos y flores silvestres en delicadas tonalidades pastel. De belleza bucólica, campestre y romántica.",
     price: 300000,
-    image: assetUrl("./assets/images/lbd_product_blossom_knot_1780280846869.png"), // Stand-alone Blossom Knot
+    image: new URL("./assets/images/lbd_product_blossom_knot_1780280846869.png", import.meta.url).href, // Stand-alone Blossom Knot
     category: "diadema",
     isFavorito: false,
     materials: "Seda de alta hilatura con estampado floral, diadema interior de resina moldeada de memoria térmica, forro interior aterciopelado anti-deslizante.",
@@ -92,7 +90,7 @@ export const PRODUCTS: Product[] = [
     frenchName: "Forme Géométrique",
     description: "Un impresionante pasador de cabello inspirado en la arquitectura cubista y el constructivismo estético. Compuesto por barras de metal entrelazadas y con acabados contrastantes que capturan el espectro luminoso con un aire futurista y vanguardista.",
     price: 540000,
-    image: assetUrl("./assets/images/lbd_product_geometric_slide_1780280862288.png"), // Stand-alone Geometric Slide
+    image: new URL("./assets/images/lbd_product_geometric_slide_1780280862288.png", import.meta.url).href, // Stand-alone Geometric Slide
     category: "pasador",
     isFavorito: false,
     materials: "Níquel-latón de joyería pesada, baño de oro de 18 quilates con acabados duales cepillados y pulidos a espejo.",
@@ -116,7 +114,7 @@ export const PRODUCTS: Product[] = [
     frenchName: "Peigne Céleste",
     description: "Una peineta nupcial de ensueño, engarzada con cristales de roca facetados austríacos y pequeñas hojas doradas de metal cincelado a mano. Diseñada para lucir sobre recogidos asimétricos o moños bajos de elegancia atemporal.",
     price: 480000,
-    image: assetUrl("./assets/images/crystal_vine_comb_1780281711421.png"),
+    image: new URL("./assets/images/crystal_vine_comb_1780281711421.png", import.meta.url).href,
     category: "pasador",
     isFavorito: true,
     materials: "Cristal de roca facetado, aleación de cobre antialérgico, baño de oro de 14 quilates, alambre de joyería.",
@@ -141,7 +139,7 @@ export const PRODUCTS: Product[] = [
     frenchName: "Couronne de Velours",
     description: "Diadema acolchada de porte señorial e imperial. Forrada íntegramente en terciopelo italiano negro profundo de textura sedosa. Una pieza ideal para dar un marco de sofisticación absoluta a cualquier melena, ya sea lisa o rizada.",
     price: 272000,
-    image: assetUrl("./assets/images/velvet_padded_crown_1780281725705.png"),
+    image: new URL("./assets/images/velvet_padded_crown_1780281725705.png", import.meta.url).href,
     category: "diadema",
     isFavorito: false,
     materials: "Terciopelo de algodón italiano genuino, armazón interno de polímero moldeable antifatiga, acolchado de espuma viscoelástica.",
@@ -162,10 +160,10 @@ export const PRODUCTS: Product[] = [
   {
     id: "lbd-silk-bow",
     name: "The Organza Silk Bow",
-    frenchName: "N�ud d'Organza",
+    frenchName: "Nœud d'Organza",
     description: "Un romántico y vaporoso lazo xl elaborado con organza de seda traslúcida en tono marfil, complementado con una caída elegante y un remate central de perlas de río selectas. Ofrece un movimiento fluido lleno de encanto y fineza.",
     price: 220000,
-    image: assetUrl("./assets/images/organza_silk_bow_1780281740933.png"),
+    image: new URL("./assets/images/organza_silk_bow_1780281740933.png", import.meta.url).href,
     category: "pasador",
     isFavorito: false,
     materials: "100% Organza de seda natural, perlas barrocas cultivadas de río, clip de acero niquelado.",
@@ -186,10 +184,10 @@ export const PRODUCTS: Product[] = [
   {
     id: "lbd-pearl-pins",
     name: "The Trinity Pearl Pins",
-    frenchName: "Trio d'�0toiles",
+    frenchName: "Trio d'Étoiles",
     description: "Juego exclusivo de tres horquillas de joyería fina, cada una coronada por una perla de forma irregular natural. Son pequeñas piezas de arte que pueden colocarse juntas imitando una constelación o esparcidas por un recogido.",
     price: 192000,
-    image: assetUrl("./assets/images/trinity_pearl_pins_1780281752433.png"),
+    image: new URL("./assets/images/trinity_pearl_pins_1780281752433.png", import.meta.url).href,
     category: "pasador",
     isFavorito: true,
     materials: "Perlas de agua dulce barrocas asimétricas, alfileres de latón chapado en oro de 18 quilates de excelente elasticidad.",
@@ -210,10 +208,10 @@ export const PRODUCTS: Product[] = [
   {
     id: "lbd-aphrodite-gold",
     name: "Aphrodite Laurel Pins Suite",
-    frenchName: "�0pingles d'Aphrodite",
+    frenchName: "Épingles d'Aphrodite",
     description: "Tres delicadas horquillas inspiradas en las coronas de laurel de la Grecia clásica. Cada pin exhibe un detallado ramaje de hojas de oro cinceladas con finos nervios orgánicos que captan el brillo de los focos de manera majestuosa.",
     price: 340000,
-    image: assetUrl("./assets/images/aphrodite_laurel_pins_1780281768298.png"),
+    image: new URL("./assets/images/aphrodite_laurel_pins_1780281768298.png", import.meta.url).href,
     category: "pasador",
     isFavorito: false,
     materials: "Hojas de latón forrado de oro de 18 quilates, horquillas de alta resistencia.",
@@ -237,7 +235,7 @@ export const PRODUCTS: Product[] = [
     frenchName: "Serre-tête Impératrice",
     description: "Una suntuosa diadema de terciopelo esmeralda engalanada con cristales cúbicos verdes tallados que destellan luz esmeralda y oro. Un tributo a la realeza que confiere una presencia sin precedentes.",
     price: 440000,
-    image: assetUrl("./assets/images/empress_emerald_headband_1780281781519.png"),
+    image: new URL("./assets/images/empress_emerald_headband_1780281781519.png", import.meta.url).href,
     category: "diadema",
     isFavorito: false,
     materials: "Terciopelo de alta costura esmeralda, cristales facetados corte esmeralda y brillante, base acolchada ultra blanda.",
@@ -261,7 +259,7 @@ export const PRODUCTS: Product[] = [
     frenchName: "Le Set Bestie",
     description: "La combinación de gala definitiva de Locks by Danna. Este set exclusivo junta nuestra icónica tiara de doble arco 'Duo de Perles' con el ramillete de perlas de alta retención 'Amas de Perles' con un descuento especial del 20% coordinado por Danna.",
     price: 880000,
-    image: assetUrl("./assets/images/lbd_product_pearl_tiara_1780280813932.png"), // Stand-alone Tiara Icon
+    image: new URL("./assets/images/lbd_product_pearl_tiara_1780280813932.png", import.meta.url).href, // Stand-alone Tiara Icon
     category: "set",
     isFavorito: true,
     isSet: true,
@@ -287,7 +285,7 @@ export const PRODUCTS: Product[] = [
     frenchName: "Le Set Royal",
     description: "El ajuar nupcial por excelencia seleccionado por Danna. Reúne la Pearl Tiara celestial con el romántico Peigne Céleste nupcial. Diseñados para complementarse mutuamente en un peinado de doble fase (ceremonia y fiesta). Incluye descuento especial.",
     price: 1060000,
-    image: assetUrl("./assets/images/royal_bride_set_1780281797965.png"),
+    image: new URL("./assets/images/royal_bride_set_1780281797965.png", import.meta.url).href,
     category: "set",
     isFavorito: true,
     isSet: true,
@@ -309,17 +307,17 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "set-bloom-shine",
-    name: "Set Bloom & Shine (N�ud & Géométrique)",
+    name: "Set Bloom & Shine (Nœud & Géométrique)",
     frenchName: "L'Ensemble Fleuri",
-    description: "Un fascinante set casual chic para marcar tendencia diaria. Fusiona el estilo romántico bucólico de la diadema jacquard acolchada 'N�ud Fleuri' con el vanguardismo minimalista del pasador constructivista 'Forme Géométrique'.",
+    description: "Un fascinante set casual chic para marcar tendencia diaria. Fusiona el estilo romántico bucólico de la diadema jacquard acolchada 'Nœud Fleuri' con el vanguardismo minimalista del pasador constructivista 'Forme Géométrique'.",
     price: 660000,
-    image: assetUrl("./assets/images/lbd_product_blossom_knot_1780280846869.png"),
+    image: new URL("./assets/images/lbd_product_blossom_knot_1780280846869.png", import.meta.url).href,
     category: "set",
     isFavorito: false,
     isSet: true,
     materials: "Seda de jacquard italiano estampada, latón de alta retención bañado en oro de 18k con acabados duales satinados.",
     details: [
-      "Incluye la diadema de nudo Blossom Knot (N�ud Fleuri)",
+      "Incluye la diadema de nudo Blossom Knot (Nœud Fleuri)",
       "Incluye el pasador de oro Geometric Slide (Forme Géométrique)",
       "Empaque de regalo ecológico con aroma de lavanda de la Toscana",
       "Folleto de peinados de inspiración editorial creados por Danna"
@@ -338,7 +336,7 @@ export const PRESET_MODELS = [
   {
     id: "atelier-model",
     name: "Clara (Sleek Straight)",
-    image: assetUrl("./assets/images/lbd_pearl_tiara_1780280311846.png"),
+    image: new URL("./assets/images/lbd_pearl_tiara_1780280311846.png", import.meta.url).href,
     hairType: "Lacio"
   },
   {
