@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 import { Product } from "../types";
 import { PRODUCTS, formatCOP } from "../data";
 import { HelpCircle, Eye, ShoppingBag, Sparkles, X, ChevronRight, Check, Heart, Trophy, Crown, Sparkle, Mail, ArrowRight, Instagram, MessageCircle, HeartHandshake } from "lucide-react";
@@ -109,13 +109,13 @@ export default function ProductCatalog({
         {/* Centered Slogan and brand name matching the screenshot exactly */}
         <div className="z-10 text-center max-w-3xl mx-auto px-4 flex flex-col items-center justify-center space-y-4">
           <span className="bg-[#EC1B96]/95 backdrop-blur-md text-[#FBFFFC] px-3.5 py-1 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest rounded-full border border-white/20 animate-pulse shadow-sm">
-            âœ¨ Nueva LÃ­nea Exclusiva
+            �S� Nueva Línea Exclusiva
           </span>
           <h1 className="font-serif text-[#FBFFFC] text-4.5xl sm:text-6xl md:text-7xl font-light tracking-widest drop-shadow-lg leading-none">
             LOCKS BY DANNA
           </h1>
           <p className="font-sans text-yellow-100 text-[11px] sm:text-xs md:text-sm font-bold tracking-[0.25em] uppercase drop-shadow-sm flex items-center gap-1.5">
-            <span>Â¡TU CORONA TE ESPERA, BESTIE!</span>
+            <span>¡TU CORONA TE ESPERA, BESTIE!</span>
           </p>
 
           <div className="pt-3 flex flex-row items-center justify-center gap-3 w-full max-w-xs sm:max-w-md">
@@ -155,7 +155,7 @@ export default function ProductCatalog({
           <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#FFF4F5] text-[#EC1B96]">
             <Crown className="h-3.5 w-3.5 fill-[#EC1B96]" />
           </span>
-          <span>ENVÃOS A TODO EL PAÃS</span>
+          <span>ENVÍOS A TODO EL PAÍS</span>
         </div>
         <div className="flex items-center justify-center space-x-3 text-[10px] font-bold uppercase tracking-widest text-[#2A1A1D] md:border-x md:border-atelier-sand/60">
           <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#FFF4F5] text-[#EC1B96]">
@@ -167,7 +167,7 @@ export default function ProductCatalog({
           <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#FFF4F5] text-[#EC1B96]">
             <Sparkle className="h-3.5 w-3.5 fill-[#EC1B96]" />
           </span>
-          <span>DISEÃ‘OS EXCLUSIVOS</span>
+          <span>DISE�OS EXCLUSIVOS</span>
         </div>
       </div>
 
@@ -177,7 +177,7 @@ export default function ProductCatalog({
           <div>
             <span className="text-[10px] font-bold uppercase tracking-widest text-[#8F7225]">Secciones Exclusivas</span>
             <h2 className="font-serif text-2xl font-normal text-[#1C1A17] mt-1 capitalize" id="current-collection-title">
-              {selectedCollection === "principal" ? "Nuestra SelecciÃ³n Estelar" : selectedCollection === "favoritos" ? "Favoritos Seleccionados de Danna" : "Sets de EdiciÃ³n Exclusiva"}
+              {selectedCollection === "principal" ? "Nuestra Selección Estelar" : selectedCollection === "favoritos" ? "Favoritos Seleccionados de Danna" : "Sets de Edición Exclusiva"}
             </h2>
           </div>
 
@@ -194,7 +194,7 @@ export default function ProductCatalog({
                   : "bg-[#F2EFE9]/60 text-[#625E57] hover:bg-[#E2DFD9] border border-[#E2DFD9]/40"
               }`}
             >
-              ColecciÃ³n Principal
+              Colección Principal
             </button>
             <button
               onClick={() => {
@@ -340,7 +340,7 @@ export default function ProductCatalog({
                     {addedItemNotification === product.id ? (
                       <>
                         <Check className="h-3.5 w-3.5 text-green-300 animate-bounce" />
-                        <span>Â¡AÃ±adido!</span>
+                        <span>¡Añadido!</span>
                       </>
                     ) : (
                       <>
@@ -359,10 +359,10 @@ export default function ProductCatalog({
       {/* 4. LOOKBOOK LBD SECTION - PHOTO GALLERY SHOWING ONLY PRODUCT SHOTS (NO PEOPLE) */}
       <div className="mt-28 border-t border-[#E2DFD9] pt-20" id="lookbook-lbd-section">
         <div className="text-center mb-12">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-[#C29F38]">Pureza y DiseÃ±o En Cada Ãngulo</span>
+          <span className="text-[10px] font-bold uppercase tracking-widest text-[#C29F38]">Pureza y Diseño En Cada Ángulo</span>
           <h2 className="font-serif text-3xl font-normal text-[#1C1A17] mt-1.5">Lookbook LBD</h2>
           <p className="text-xs text-[#625E57] max-w-sm mx-auto mt-2">
-            Disfruta de nuestros diseÃ±os expuestos solos. Capturando el lustre sagrado del oro y las perlas de agua dulce cultivadas a mano.
+            Disfruta de nuestros diseños expuestos solos. Capturando el lustre sagrado del oro y las perlas de agua dulce cultivadas a mano.
           </p>
         </div>
 
@@ -394,7 +394,7 @@ export default function ProductCatalog({
             <div className="p-4 space-y-1">
               <h3 className="font-serif text-base font-semibold text-[#1C1A17]">Tu corona natural</h3>
               <p className="text-[11px] text-[#625E57] leading-relaxed">
-                Diadema de doble arco de oro de 18k baÃ±ada con perlas seleccionadas a mano. Un aura de reina para ti.
+                Diadema de doble arco de oro de 18k bañada con perlas seleccionadas a mano. Un aura de reina para ti.
               </p>
             </div>
           </div>
@@ -402,31 +402,31 @@ export default function ProductCatalog({
           {/* Card 3: Flores silvestres */}
           <div className="group bg-[#FBFFFC] border border-[#E2DFD9] rounded-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md">
             <div className="relative aspect-[3/4] bg-[#F2EFE9] overflow-hidden">
-              <img src={new URL("../assets/images/lbd_product_blossom_knot_1780280846869.png", import.meta.url).href} alt="NÅ“ud Fleuri" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <img src={new URL("../assets/images/lbd_product_blossom_knot_1780280846869.png", import.meta.url).href} alt="N�ud Fleuri" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute top-3 left-3">
-                <span className="rounded-sm bg-[#1C1A17] text-[#FBFFFC] text-[8px] font-extrabold uppercase px-1.5 py-0.5">BucÃ³lico</span>
+                <span className="rounded-sm bg-[#1C1A17] text-[#FBFFFC] text-[8px] font-extrabold uppercase px-1.5 py-0.5">Bucólico</span>
               </div>
             </div>
             <div className="p-4 space-y-1">
               <h3 className="font-serif text-base font-semibold text-[#1C1A17]">Flores silvestres</h3>
               <p className="text-[11px] text-[#625E57] leading-relaxed">
-                Jacquard nudo floral con tonos pasteles de la campiÃ±a. La diadema Blossom Knot evoca la dulzura de la primavera.
+                Jacquard nudo floral con tonos pasteles de la campiña. La diadema Blossom Knot evoca la dulzura de la primavera.
               </p>
             </div>
           </div>
 
-          {/* Card 4: Brilla en cada ocasiÃ³n */}
+          {/* Card 4: Brilla en cada ocasión */}
           <div className="group bg-[#FBFFFC] border border-[#E2DFD9] rounded-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md">
             <div className="relative aspect-[3/4] bg-[#F2EFE9] overflow-hidden">
-              <img src={new URL("../assets/images/lbd_product_geometric_slide_1780280862288.png", import.meta.url).href} alt="Forme GÃ©omÃ©trique" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <img src={new URL("../assets/images/lbd_product_geometric_slide_1780280862288.png", import.meta.url).href} alt="Forme Géométrique" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute top-3 left-3">
                 <span className="rounded-sm bg-[#1C1A17] text-[#FBFFFC] text-[8px] font-extrabold uppercase px-1.5 py-0.5">Constructivista</span>
               </div>
             </div>
             <div className="p-4 space-y-1">
-              <h3 className="font-serif text-base font-semibold text-[#1C1A17]">Brilla en cada ocasiÃ³n</h3>
+              <h3 className="font-serif text-base font-semibold text-[#1C1A17]">Brilla en cada ocasión</h3>
               <p className="text-[11px] text-[#625E57] leading-relaxed">
-                Pasador de corte cubista baÃ±ado en oro con doble textura. GeometrÃ­a vanguardista para reflejar luz.
+                Pasador de corte cubista bañado en oro con doble textura. Geometría vanguardista para reflejar luz.
               </p>
             </div>
           </div>
@@ -447,10 +447,10 @@ export default function ProductCatalog({
             <Sparkle className="h-5 w-5 fill-[#C29F38]" />
           </div>
           
-          <h2 className="font-serif text-3xl md:text-4xl font-normal text-[#1C1A17]">Ãšnete a nuestra VIP List</h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-normal text-[#1C1A17]">�anete a nuestra VIP List</h2>
           
           <p className="font-sans text-xs sm:text-sm leading-relaxed text-[#625E57]">
-            Recibe un <strong className="text-[#C29F38]">10% de descuento inmediato</strong> en tu primera compra del Atelier y sÃ© la primera en enterarte de nuevos drops exclusivos. Elegancia en cada detalle. Accesorios de lujo pensados para la mujer moderna, audaz y sofisticada.
+            Recibe un <strong className="text-[#C29F38]">10% de descuento inmediato</strong> en tu primera compra del Atelier y sé la primera en enterarte de nuevos drops exclusivos. Elegancia en cada detalle. Accesorios de lujo pensados para la mujer moderna, audaz y sofisticada.
           </p>
 
           <AnimatePresence mode="wait">
@@ -478,7 +478,7 @@ export default function ProductCatalog({
                   type="submit"
                   className="rounded-sm bg-[#1C1A17] hover:bg-[#C29F38] text-[#FBFFFC] px-6 py-3 text-xs font-bold uppercase tracking-wider transition-all hover:shadow-md"
                 >
-                  Confirmar SuscripciÃ³n
+                  Confirmar Suscripción
                 </button>
               </motion.form>
             ) : (
@@ -491,15 +491,15 @@ export default function ProductCatalog({
                 <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-green-100 text-green-600 mb-1">
                   <Check className="h-5 w-5" />
                 </div>
-                <h4 className="font-serif text-base text-green-900 font-semibold">Â¡Bienvenida al Atelier, Bestie!</h4>
+                <h4 className="font-serif text-base text-green-900 font-semibold">¡Bienvenida al Atelier, Bestie!</h4>
                 <p className="text-xs text-green-700 leading-relaxed">
-                  Ya eres parte de nuestra VIP List oficial. Copia y aplica tu cupÃ³n de regalo en tu carrito para disfrutar del descuento:
+                  Ya eres parte de nuestra VIP List oficial. Copia y aplica tu cupón de regalo en tu carrito para disfrutar del descuento:
                 </p>
                 <div className="font-mono bg-[#1C1A17] inline-block font-bold text-[#FBFFFC] text-sm px-4 py-2 rounded-sm border border-[#C29F38]/40 tracking-widest my-2 select-all hover:bg-[#C29F38] transition-colors cursor-pointer" title="Haga clic para seleccionar">
                   LBDPERLE
                 </div>
                 <p className="text-[10px] text-green-600 italic">
-                  *VÃ¡lido para todas las piezas capilares de nuestra selecciÃ³n.
+                  *Válido para todas las piezas capilares de nuestra selección.
                 </p>
               </motion.div>
             )}
@@ -512,20 +512,20 @@ export default function ProductCatalog({
               target="_blank" 
               rel="noreferrer" 
               className="flex items-center space-x-2 text-xs hover:text-[#EC1B96] transition-colors"
-              title="SÃ­guenos en Instagram"
+              title="Síguenos en Instagram"
             >
               <Instagram className="h-4 w-4" />
               <span className="font-mono text-[10px] font-bold">@locksbydanna</span>
             </a>
-            <span className="text-[#E2DFD9]">â€¢</span>
+            <span className="text-[#E2DFD9]">⬢</span>
             <div className="flex items-center space-x-1.5 text-xs">
               <MessageCircle className="h-4 w-4 text-[#EC1B96]" />
               <span className="font-sans text-[11px]">Soporte Bestie por WhatsApp</span>
             </div>
-            <span className="text-[#E2DFD9]">â€¢</span>
+            <span className="text-[#E2DFD9]">⬢</span>
             <div className="flex items-center space-x-1.5 text-xs">
               <HeartHandshake className="h-4 w-4 text-[#EC1B96]" />
-              <span className="font-sans text-[11px]">GarantÃ­a de Lustre Vitalicio</span>
+              <span className="font-sans text-[11px]">Garantía de Lustre Vitalicio</span>
             </div>
           </div>
         </div>
@@ -614,7 +614,7 @@ export default function ProductCatalog({
                             {formatCOP(selectedProduct.price)}
                           </span>
                           <span className="rounded-sm bg-[#F4E8C1] px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#8F7225]">
-                            EnvÃ­o Gratis A Colombia y Todo El Mundo
+                            Envío Gratis A Colombia y Todo El Mundo
                           </span>
                         </div>
 
@@ -644,7 +644,7 @@ export default function ProductCatalog({
                           className="w-full flex items-center justify-center space-x-2 rounded-sm bg-[#1C1A17] py-3 text-xs font-bold uppercase tracking-wider text-[#FBFFFC] transition-colors hover:bg-[#EC1B96]"
                         >
                           <ShoppingBag className="h-4 w-4 text-[#EC1B96]" />
-                          <span>AÃ±adir a mi Bolsa Locks</span>
+                          <span>Añadir a mi Bolsa Locks</span>
                         </button>
                       </div>
                     </div>
@@ -653,7 +653,7 @@ export default function ProductCatalog({
                   {/* Bullet Spec Accordions */}
                   <div className="mt-10 border-t border-[#E2DFD9] pt-6">
                     <h4 className="text-xs font-bold uppercase tracking-wider text-[#1C1A17] mb-4">
-                      Especificaciones de DiseÃ±o Sostenible
+                      Especificaciones de Diseño Sostenible
                     </h4>
                     <ul className="space-y-3">
                       {selectedProduct.details.map((detail, index) => (
