@@ -2,8 +2,8 @@ import React from "react";
 import { ShoppingBag, Search, User, LogOut, Sparkle } from "lucide-react";
 
 interface NavigationProps {
-  activeTab: "lookbook" | "about";
-  setActiveTab: (tab: "lookbook" | "about") => void;
+  activeTab: "lookbook" | "about" | "vision" | "mission";
+  setActiveTab: (tab: "lookbook" | "about" | "vision" | "mission") => void;
   cartCount: number;
   onOpenCart: () => void;
   searchVal: string;
@@ -66,6 +66,30 @@ export default function Navigation({
             }`}
           >
             Nosotros
+          </button>
+
+          <button
+            id="nav-vision"
+            onClick={() => setActiveTab("vision")}
+            className={`cursor-pointer text-[11px] font-bold uppercase tracking-widest transition-all pb-1 ${
+              activeTab === "vision"
+                ? "text-white border-b-2 border-white"
+                : "text-white/80 hover:text-white"
+            }`}
+          >
+            Visión
+          </button>
+
+          <button
+            id="nav-mission"
+            onClick={() => setActiveTab("mission")}
+            className={`cursor-pointer text-[11px] font-bold uppercase tracking-widest transition-all pb-1 ${
+              activeTab === "mission"
+                ? "text-white border-b-2 border-white"
+                : "text-white/80 hover:text-white"
+            }`}
+          >
+            Misión
           </button>
         </nav>
 
@@ -161,6 +185,18 @@ export default function Navigation({
           className={activeTab === "about" ? "text-white underline decoration-2 underline-offset-4" : "text-white/80"}
         >
           Nosotros
+        </button>
+        <button
+          onClick={() => setActiveTab("vision")}
+          className={activeTab === "vision" ? "text-white underline decoration-2 underline-offset-4" : "text-white/80"}
+        >
+          Visión
+        </button>
+        <button
+          onClick={() => setActiveTab("mission")}
+          className={activeTab === "mission" ? "text-white underline decoration-2 underline-offset-4" : "text-white/80"}
+        >
+          Misión
         </button>
         {currentUser && (
           <button onClick={onLogout} className="text-white/70 hover:text-white font-medium">

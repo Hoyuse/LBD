@@ -9,32 +9,11 @@ import { MapPin, Calendar, Compass, ShieldCheck, HelpCircle, Hammer, Sparkles, S
 import { motion, AnimatePresence } from "motion/react";
 import { useFirebase } from "./context/FirebaseContext";
 
-const VIDEO_GALLERY = [
-  {
-    id: "video-atelier",
-    title: "Atelier en Movimiento",
-    description: "Un vistazo al proceso creativo detrás de una tiara Locks by Danna.",
-    src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
-  },
-  {
-    id: "video-presentacion",
-    title: "Presentación de Colección",
-    description: "Muestra de la nueva selección de joyas capilares y estilismos exclusivos.",
-    src: "https://www.w3schools.com/html/mov_bbb.mp4"
-  },
-  {
-    id: "video-detalle",
-    title: "Detalle de Texturas",
-    description: "Captura los acabados y el brillo de cada pieza con movimiento y luz.",
-    src: "https://media.w3.org/2010/05/sintel/trailer.mp4"
-  }
-];
-
 export default function App() {
   const { user, fbUser, loading, appointments, logout, bookAppointment } = useFirebase();
 
   // Navigation active state lookbook / about
-  const [activeTab, setActiveTab] = useState<"lookbook" | "about" >("lookbook");
+  const [activeTab, setActiveTab] = useState<"lookbook" | "about" | "vision" | "mission">("lookbook");
 
   // Cart orchestration state
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -280,36 +259,55 @@ export default function App() {
                   </div>
                 </div>
 
-                <section className="mt-20 rounded-3xl border border-[#E2DFD9] bg-[#FFFDF9] p-8 shadow-sm" id="video-session">
-                  <div className="text-center mb-10">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#C29F38]">Sesión de Videos</span>
-                    <h2 className="font-serif text-3xl font-normal text-[#1C1A17] mt-3">Videos Del Atelier</h2>
-                    <p className="mx-auto max-w-2xl text-xs leading-relaxed text-[#625E57] mt-4">
-                      Mira cómo cobran vida nuestras piezas en movimiento. Puedes reemplazar estos ejemplos por tus propios videos MP4 de hasta 4MB cada uno en el futuro.
-                    </p>
-                  </div>
+              </div>
+            )}
 
-                  <div className="grid gap-6 md:grid-cols-3">
-                    {VIDEO_GALLERY.map((video) => (
-                      <div key={video.id} className="rounded-2xl overflow-hidden border border-[#E2DFD9] bg-white shadow-sm">
-                        <video
-                          controls
-                          playsInline
-                          className="h-44 w-full bg-[#000] object-cover"
-                          poster=""
-                        >
-                          <source src={video.src} type="video/mp4" />
-                          Tu navegador no soporta este formato de video.
-                        </video>
-                        <div className="p-4">
-                          <h3 className="font-serif text-base font-semibold text-[#1C1A17]">{video.title}</h3>
-                          <p className="mt-2 text-[11px] leading-relaxed text-[#625E57]">{video.description}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </section>
+            {activeTab === "vision" && (
+              <div className="mx-auto max-w-3xl px-6 py-16 md:px-12 md:py-20" id="vision-page">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#C29F38]">Locks by Danna</span>
+                <h1 className="font-serif text-4xl font-normal text-[#1C1A17] sm:text-5xl leading-tight mt-4">
+                  Nuestra Visión
+                </h1>
+                <div className="h-0.5 w-16 bg-[#C29F38] mt-6"></div>
+                <p className="text-sm leading-relaxed text-[#625E57] mt-8">
+                  Ser la referencia en Latinoamérica de joyería capilar de alta costura: un espacio donde cada mujer encuentre la pieza que traduce su esencia en luz, confianza y elegancia atemporal.
+                </p>
+                <p className="text-sm leading-relaxed text-[#625E57] mt-4">
+                  Aspiramos a que Locks by Danna inspire una nueva forma de celebrarse — en bodas, graduaciones y momentos decisivos — con accesorios artesanales que honran la diversidad del cabello y la belleza auténtica de quien los lleva.
+                </p>
+                <p className="text-xs italic text-[#8F7225] mt-8">
+                  “Que cada corona cuente una historia de empoderamiento y sofisticación.”
+                </p>
+              </div>
+            )}
 
+            {activeTab === "mission" && (
+              <div className="mx-auto max-w-3xl px-6 py-16 md:px-12 md:py-20" id="mission-page">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#C29F38]">Locks by Danna</span>
+                <h1 className="font-serif text-4xl font-normal text-[#1C1A17] sm:text-5xl leading-tight mt-4">
+                  Nuestra Misión
+                </h1>
+                <div className="h-0.5 w-16 bg-[#C29F38] mt-6"></div>
+                <p className="text-sm leading-relaxed text-[#625E57] mt-8">
+                  Diseñar y confeccionar a mano tiaras, diademas y pasadores de lujo con materiales nobles, cuidando cada detalle para que se adapten con comodidad y respeto a todo tipo de cabello.
+                </p>
+                <p className="text-sm leading-relaxed text-[#625E57] mt-4">
+                  Acompañamos a nuestras clientas con asesoría personalizada — presencial en Cartagena o virtual — para que elijan la pieza ideal según su ocasión, estilo y silueta capilar, con procesos transparentes y un trato cercano digno de una maison privada.
+                </p>
+                <ul className="mt-8 space-y-3 text-xs text-[#625E57]">
+                  <li className="flex items-start gap-2">
+                    <Sparkle className="h-4 w-4 text-[#C29F38] shrink-0 mt-0.5" />
+                    <span>Artesanía meticulosa y materiales seleccionados con criterio ético.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Sparkle className="h-4 w-4 text-[#C29F38] shrink-0 mt-0.5" />
+                    <span>Experiencia de compra cálida, inclusiva y pensada para la mujer moderna.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Sparkle className="h-4 w-4 text-[#C29F38] shrink-0 mt-0.5" />
+                    <span>Compromiso con la calidad, la durabilidad y el brillo que mereces en tu gran día.</span>
+                  </li>
+                </ul>
               </div>
             )}
           </motion.div>
@@ -375,9 +373,8 @@ export default function App() {
             </div>
           </div>
 
-          <div className="mt-12 pt-6 border-t border-[#F2EFE9] flex flex-col md:flex-row items-center justify-between text-[11px] text-[#625E57]" id="sub-footer">
-            <p>© 2024 Locks by Danna. Todos los derechos reservados.</p>
-            <div className="flex space-x-4 mt-4 md:mt-0 font-mono text-[9px]" id="legal-links">
+          <div className="mt-12 pt-6 border-t border-[#F2EFE9] flex flex-col md:flex-row items-center justify-center text-[11px] text-[#625E57]" id="sub-footer">
+            <div className="flex space-x-4 font-mono text-[9px]" id="legal-links">
               <a href="#" className="hover:text-[#C29F38]">Términos de Servicio</a>
               <span>⬢</span>
               <a href="#" className="hover:text-[#C29F38]">Privacidad</a>
