@@ -3,6 +3,7 @@ import { Product } from "../types";
 import { PRODUCTS, formatCOP } from "../data";
 import { HelpCircle, Eye, ShoppingBag, Sparkles, X, ChevronRight, Check, Heart, Trophy, Crown, Sparkle, Mail, ArrowRight, Instagram, MessageCircle, HeartHandshake } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import WelcomeSection from "./WelcomeSection";
 
 interface ProductCatalogProps {
   onAddToCart: (product: Product) => void;
@@ -160,6 +161,8 @@ export default function ProductCatalog({
         {/* Bottom Spacer to balance buttons */}
         <div className="h-10 z-10"></div>
       </div>
+
+      <WelcomeSection />
 
       {/* THREE ICON PROMO RIBBON (exactly matching the screenshot bottom strip) */}
       <div 

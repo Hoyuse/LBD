@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navigation from "./components/Navigation";
 import ProductCatalog from "./components/ProductCatalog";
 import CartDrawer from "./components/CartDrawer";
@@ -92,6 +92,14 @@ export default function App() {
   const handleClearCart = () => {
     setCart([]);
   };
+
+  useEffect(() => {
+    if (window.location.hash !== "#bienvenida") return;
+    setActiveTab("lookbook");
+    requestAnimationFrame(() => {
+      document.getElementById("bienvenida")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#FBFFFC] flex flex-col justify-between" id="applet-viewport">
